@@ -1,130 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutke Papiens - Porcos Papudos de Raça</title>
-    
-    <!-- Link Direto e Estável do Tailwind CSS v2 -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    
-    <!-- Fontes Google Premium -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    
-    <!-- Vinculação do arquivo CSS externo -->
+    <title>Rutke Papiens - Porcos Papudos</title>
+    <!-- Conecta com o arquivo de estilo -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="forest-bg min-h-screen relative overflow-x-hidden text-gray-100">
+<body>
 
-    <!-- Macaco Estático na Árvore (Topo Direito) -->
-    <div class="monkey-anchor hidden md:block">
-        <svg viewBox="0 0 100 100" fill="currentColor" class="text-green-400">
-            <circle cx="50" cy="35" r="15"/>
-            <path d="M50 50c-10 0-18 8-18 18v12h4v-12c0-8 6-14 14-14s14 6 14 14v12h4v-12c0-10-8-18-18-18z"/>
-            <path d="M35 35c-5 0-8 4-8 8s3 8 8 8M65 35c5 0 8 4 8 8s-3 8-8 8" fill="none" stroke="currentColor" stroke-width="3"/>
-        </svg>
-    </div>
+    <!-- Fundo do site com os animais (Capivara e Macaco) -->
+    <div class="macaco">🐒</div>
+    <div class="capivara">🦦</div>
 
-    <!-- Capivara Estática no Chão (Base Esquerda) -->
-    <div class="capybara-anchor hidden md:block">
-        <svg viewBox="0 0 120 80" fill="currentColor" class="text-green-500">
-            <ellipse cx="60" cy="45" rx="40" ry="25"/>
-            <ellipse cx="95" cy="30" rx="18" ry="14"/>
-            <rect x="35" y="60" width="10" height="15" rx="2"/>
-            <rect x="75" y="60" width="10" height="15" rx="2"/>
-        </svg>
-    </div>
-
-    <!-- 1. Hero Section -->
-    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative z-10">
-        <div class="max-w-3xl">
-            <span class="inline-block text-green-400 font-semibold tracking-widest text-sm uppercase bg-gray-900 bg-opacity-60 px-4 py-1.5 rounded-full border border-gray-800">
-                Criatório Elite • Alta Genética
-            </span>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white font-serif mt-6">
-                Rutke Papiens
-            </h1>
-            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed mt-6">
-                Excelência na criação de <strong class="text-green-400 font-semibold">porcos papudos</strong> e matrizes de raça pura em perfeita harmonia com a natureza.
-            </p>
-            <div class="pt-8">
-                <a href="#catalogo" class="inline-block bg-green-500 hover:bg-green-600 text-gray-950 font-bold px-8 py-4 rounded-xl shadow-lg">
-                    Ver Catálogo Disponível
-                </a>
-            </div>
-        </div>
+    <!-- Topo do site -->
+    <header>
+        <span class="subtitulo">Criatório Elite • Alta Genética</span>
+        <h1>Rutke Papiens</h1>
+        <p>Excelência na criação de porcos papudos e matrizes de raça pura em perfeita harmonia com a natureza.</p>
+        <a href="#catalogo" class="botao">Ver Catálogo Disponível</a>
     </header>
 
-    <!-- 2. Diferenciais (Grid de 3 Cards) -->
-    <section class="max-w-6xl mx-auto px-4 py-24 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-gray-900 bg-opacity-50 border border-gray-800 p-8 rounded-2xl">
-                <div class="text-green-400 text-3xl mb-4">🧬</div>
-                <h3 class="text-xl font-bold text-white mb-2">Genética Avançada</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Linhagens selecionadas com árvore genealógica limpa e foco em alta taxa de conversão reprodutiva.</p>
+    <!-- Seção de Diferenciais -->
+    <section class="container">
+        <div class="grid-3">
+            <div class="card">
+                <div class="icone">🧬</div>
+                <h3>Genética Avançada</h3>
+                <p>Linhagens selecionadas com árvore genealógica limpa e foco em alta taxa de conversão reprodutiva.</p>
             </div>
-            <!-- Card 2 -->
-            <div class="bg-gray-900 bg-opacity-50 border border-gray-800 p-8 rounded-2xl">
-                <div class="text-green-400 text-3xl mb-4">🏆</div>
-                <h3 class="text-xl font-bold text-white mb-2">Padrão Papudo</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Animais com excelente conformação anatômica, ganho de peso ideal e acabamento premium de carcaça.</p>
+            <div class="card">
+                <div class="icone">🏆</div>
+                <h3>Padrão Papudo</h3>
+                <p>Animais com excelente conformação anatômica, ganho de peso ideal e acabamento premium.</p>
             </div>
-            <!-- Card 3 -->
-            <div class="bg-gray-900 bg-opacity-50 border border-gray-800 p-8 rounded-2xl">
-                <div class="text-green-400 text-3xl mb-4">🍃</div>
-                <h3 class="text-xl font-bold text-white mb-2">Criação Natural</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">Bem-estar animal levado a sério. Biossegurança máxima em um ecossistema sustentável.</p>
+            <div class="card">
+                <div class="icone">🍃</div>
+                <h3>Criação Natural</h3>
+                <p>Bem-estar animal levado a sério. Biossegurança máxima em um ecossistema sustentável.</p>
             </div>
         </div>
     </section>
 
-    <!-- 3. Vitrine / Catálogo -->
-    <section id="catalogo" class="max-w-6xl mx-auto px-4 py-12 relative z-10">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-white font-serif">Lotes e Matrizes em Destaque</h2>
-            <p class="text-gray-400 mt-2">Clique para consultar valores e disponibilidade imediata</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <!-- Seção do Catálogo -->
+    <section id="catalogo" class="container">
+        <h2 class="titulo-secao">Lotes e Matrizes em Destaque</h2>
+        
+        <div class="grid-2">
             <!-- Animal 1 -->
-            <div class="bg-gray-900 bg-opacity-40 border border-gray-800 rounded-2xl overflow-hidden p-6">
-                <div class="aspect-video bg-gray-800 relative flex items-center justify-center text-green-400 rounded-xl mb-4 h-48">
-                    <span class="text-xs uppercase tracking-widest font-semibold">Foto do Reprodutor</span>
-                    <span class="absolute top-4 left-4 bg-green-500 text-gray-950 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Reprodutor Elite</span>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold text-white">Lote Papiens Imperador</h4>
-                    <p class="text-sm text-green-400 mb-3">Raça: Porco Papudo Puro (PO)</p>
-                </div>
-                <ul class="text-xs text-gray-400 space-y-1 border-t border-gray-800 pt-3 mb-4">
+            <div class="produto">
+                <div class="foto-placeholder">Foto do Reprodutor</div>
+                <h4>Lote Papiens Imperador</h4>
+                <p class="raca">Raça: Porco Papudo Puro (PO)</p>
+                <ul>
                     <li>• Idade: 14 meses</li>
                     <li>• Linhagem: Rutke Ancestral</li>
                     <li>• Registro ativo na associação</li>
                 </ul>
-                <a href="https://wa.me" target="_blank" class="block text-center bg-gray-800 hover:bg-green-500 hover:text-gray-950 text-green-400 font-semibold py-2.5 rounded-xl text-sm border border-gray-700">
-                    Consultar via WhatsApp
-                </a>
+                <a href="https://wa.me" target="_blank" class="btn-whats">Consultar via WhatsApp</a>
             </div>
+
             <!-- Animal 2 -->
-            <div class="bg-gray-900 bg-opacity-40 border border-gray-800 rounded-2xl overflow-hidden p-6">
-                <div class="aspect-video bg-gray-800 relative flex items-center justify-center text-green-400 rounded-xl mb-4 h-48">
-                    <span class="text-xs uppercase tracking-widest font-semibold">Foto da Matriz</span>
-                    <span class="absolute top-4 left-4 bg-green-500 text-gray-950 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Matriz PO</span>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold text-white">Matriz Soberana 07</h4>
-                    <p class="text-sm text-green-400 mb-3">Raça: Papuda Doroc Premium</p>
-                </div>
-                <ul class="text-xs text-gray-400 space-y-1 border-t border-gray-800 pt-3 mb-4">
+            <div class="produto">
+                <div class="foto-placeholder">Foto da Matriz</div>
+                <h4>Matriz Soberana 07</h4>
+                <p class="raca">Raça: Papuda Doroc Premium</p>
+                <ul>
                     <li>• Idade: 11 meses</li>
                     <li>• Excelente aptidão materna</li>
                     <li>• Vacinação 100% atualizada</li>
                 </ul>
-                <a href="https://wa.me" target="_blank" class="block text-center bg-gray-800 hover:bg-green-500 hover:text-gray-950 text-green-400 font-semibold py-2.5 rounded-xl text-sm border border-gray-700">
-                    Consultar via WhatsApp
-                </a>
+                <a href="https://wa.me" target="_blank" class="btn-whats">Consultar via WhatsApp</a>
             </div>
         </div>
     </section>

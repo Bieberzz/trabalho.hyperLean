@@ -1,63 +1,181 @@
-/* ==========================================================================
-   CONFIGURAÇÃO DA FLORESTA DE FUNDO E FONTES
-   ========================================================================== */
-:root {
-    --font-sans: 'Plus Jakarta Sans', sans-serif;
-    --font-serif: 'Playfair Display', serif;
+/* CONFIGURAÇÕES BÁSICAS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+/* FUNDO DO SITE (FLORESTA) */
 body {
-    font-family: var(--font-sans);
-}
-
-.font-serif {
-    font-family: var(--font-serif);
-}
-
-/* Papel de parede da floresta estático com sobreposição escura */
-.forest-bg {
-    background: linear-gradient(rgba(10, 31, 20, 0.92), rgba(6, 23, 14, 0.96)), 
+    background: linear-gradient(rgba(10, 30, 20, 0.9), rgba(5, 20, 10, 0.95)), 
                 url('https://unsplash.com') no-repeat center center fixed;
     background-size: cover;
+    color: #ffffff;
+    padding-bottom: 60px;
 }
 
-/* Customização básica da barra de rolagem */
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #04140b;
-}
-::-webkit-scrollbar-thumb {
-    background: #10b981;
-    border-radius: 5px;
-}
-
-/* ==========================================================================
-   POSICIONAMENTO ESTÁTICO DOS ANIMAIS (SEM MOVIMENTO / SEM TRAVAMENTOS)
-   ========================================================================== */
-
-/* Macaco fixo no canto superior direito */
-.monkey-anchor {
+/* ANIMAIS FIXOS NAS LATERAIS */
+.macaco {
     position: absolute;
-    top: 60px;
-    right: 6%;
-    width: 90px;
-    height: 90px;
-    opacity: 0.25;
-    z-index: 1;
-    pointer-events: none;
+    top: 40px;
+    right: 5%;
+    font-size: 50px;
+    opacity: 0.3;
 }
 
-/* Capivara fixa no canto inferior esquerdo */
-.capybara-anchor {
+.capivara {
     position: fixed;
-    bottom: 50px;
+    bottom: 40px;
     left: 5%;
-    width: 110px;
-    height: 80px;
-    opacity: 0.2;
-    z-index: 1;
-    pointer-events: none;
+    font-size: 60px;
+    opacity: 0.3;
+}
+
+/* HERO / TOPO */
+header {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.subtitulo {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+header h1 {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+header p {
+    font-size: 18px;
+    color: #cccccc;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    background-color: #10b981;
+    color: #000000;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* GRIDS E CONTAINERS */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* CARDS DE DIFERENCIAIS */
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.icone {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+/* SEÇÃO DO CATÁLOGO */
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.produto {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.foto-placeholder {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #888888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.produto h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.raca {
+    color: #10b981;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.produto ul {
+    list-style: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.produto li {
+    font-size: 13px;
+    color: #cccccc;
+    margin-bottom: 5px;
+}
+
+.btn-whats {
+    display: block;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #10b981;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    font-weight: bold;
+    font-size: 14px;
 }
 
