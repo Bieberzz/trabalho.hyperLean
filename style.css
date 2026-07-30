@@ -1,51 +1,108 @@
-***
+/* ==========================================================================
+   1. FUNDO DO SITE (FLORESTA) E CONFIGURAÇÕES DE FONTES
+   ========================================================================== */
+:root {
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+}
 
-### 2. Estilo CSS Customizado (`style.css`)
-```css
-/* Definições Gerais e Paleta de Cores da Selva */
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #06160d; /* Verde selva profundo */
-    color: #f3f4f6;
+    font-family: var(--font-sans);
 }
 
-/* Tipografia Elegante para os Títulos */
 .font-serif {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-serif);
 }
 
-/* Fundo customizado da floresta usando imagem de copa de árvores em opacidade */
+/* Fundo com imagem de floresta densa e realista */
 .forest-bg {
-    background: linear-gradient(180deg, rgba(6, 22, 13, 0.85) 0%, rgba(6, 22, 13, 0.95) 100%), 
-                url('https://unsplash.com');
+    background: linear-gradient(rgba(4, 20, 12, 0.85), rgba(6, 26, 16, 0.9)), 
+                url('https://unsplash.com') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
-/* Elementos Visuais Animados e Posicionados (Capivaras e Macacos) */
+/* Customização da barra de rolagem estilizada para a floresta */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #02140b;
+}
+::-webkit-scrollbar-thumb {
+    background: #10b981;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #34d399;
+}
+
+/* ==========================================================================
+   2. ANCORAGENS VISUAIS (MACACO E CAPIVARA)
+   ========================================================================== */
+
+/* Macaco posicionado na árvore no topo superior direito */
 .monkey-anchor {
     position: absolute;
-    top: 12%;
-    left: 3%;
-    opacity: 0.12;
-    width: 110px;
+    top: 50px;
+    right: 5%;
+    width: 120px;
+    height: 120px;
+    opacity: 0.15;
+    z-index: 1;
     pointer-events: none;
-    transform: rotate(12deg);
-    transition: all 0.5s ease;
+    transform: rotate(-10deg);
+    animation: swing 4s ease-in-out infinite alternate;
 }
 
+/* Capivara posicionada na grama/base inferior esquerda */
 .capybara-anchor {
-    position: absolute;
+    position: fixed;
     bottom: 40px;
-    right: 6%;
-    opacity: 0.14;
-    width: 160px;
+    left: 4%;
+    width: 140px;
+    height: 100px;
+    opacity: 0.12;
+    z-index: 1;
     pointer-events: none;
-    transition: all 0.5s ease;
+    animation: subtle-move 8s ease-in-out infinite alternate;
 }
 
-/* Efeito sutil ao passar o mouse sobre os blocos */
-.monkey-anchor:hover, .capybara-anchor:hover {
-    opacity: 0.25;
+/* ==========================================================================
+   3. ANIMAÇÕES DO ECOSSISTEMA
+   ========================================================================== */
+
+/* Animação do macaco balançando levemente na árvore */
+@keyframes swing {
+    0% {
+        transform: rotate(-10deg) translateY(0);
+    }
+    100% {
+        transform: rotate(5deg) translateY(-8px);
+    }
+}
+
+/* Animação da capivara respirando/se movendo na base */
+@keyframes subtle-move {
+    0% {
+        transform: translateX(0) scaleX(1);
+    }
+    50% {
+        transform: translateX(10px) scaleX(1.02);
+    }
+    100% {
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+/* ==========================================================================
+   4. CORREÇÃO DE BLUR DO TAILWIND (BACKDROP FALLBACK)
+   ========================================================================== */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
